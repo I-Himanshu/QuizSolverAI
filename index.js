@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const fetch = require('node-fetch'); // Import fetch library
 require('dotenv').config();
 
 // const port = process.env.PORT || 3000;
