@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="API Documentation for Quiz Solver AI" />
+    <title>Quiz Solver AI - API Documentation</title>
+    <style>
+      :root {
+        --primary-color: #4caf50;
+        --secondary-color: #333;
+        --light-color: #f5f5f5;
+        --dark-color: #222;
+        --border-color: #ddd;
+        --hover-color: #ccc;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--light-color);
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      header {
+        background-color: var(--secondary-color);
+        color: var(--light-color);
+        padding: 20px 0;
+        text-align: center;
+        position: relative;
+      }
+      header button {
+        background-color: var(--primary-color);
+        color: var(--light-color);
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      header button:hover {
+        background-color: var(--hover-color);
+      }
+      header .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        background-color: var(--secondary-color);
+        color: var(--light-color);
+        border: 1px solid var(--border-color);
+        border-top: none;
+        padding: 10px;
+        box-sizing: border-box;
+        z-index: 1;
+      }
+      header .menu a {
+        color: var(--light-color);
+        text-decoration: none;
+        display: block;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      header .menu a:hover {
+        background-color: var(--hover-color);
+      }
+      nav {
+        background-color: var(--secondary-color);
+        padding: 10px 0;
+        text-align: center;
+      }
+      nav a {
+        color: var(--light-color);
+        text-decoration: none;
+        margin: 0 10px;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      nav a:hover {
+        background-color: var(--hover-color);
+      }
+      main {
+        padding: 20px 0;
+      }
+      footer {
+        background-color: var(--secondary-color);
+        color: var(--light-color);
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+      }
+      h1,
+      h2,
+      h3 {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+      .button {
+        background-color: var(--primary-color);
+        color: var(--light-color);
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition: background-color 0.3s ease;
+      }
+      .button:hover {
+        background-color: var(--hover-color);
+      }
+      .search-container {
+        float: right;
+      }
+      .search-container input[type="text"] {
+        padding: 6px;
+        margin-top: 8px;
+        margin-right: 16px;
+        border: none;
+        border-radius: 5px;
+      }
+      .search-container button {
+        background-color: var(--primary-color);
+        color: var(--light-color);
+        border: none;
+        border-radius: 5px;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        cursor: pointer;
+      }
+      .search-container button:hover {
+        background-color: var(--hover-color);
+      }
+      @media screen and (max-width: 768px) {
+        header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        header button {
+          display: block;
+        }
+        header .menu {
+          display: block;
+        }
+        nav a {
+          margin: 10px 0;
+        }
+        .search-container {
+          float: none;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Quiz Solver AI - API Documentation</h1>
+      <button onclick="showMenu()">Menu</button>
+      <div class="menu">
+        <a href="index.html">Home</a> <a href="usage.html">Usage</a>
+        <a href="installation.html">Installation</a>
+        <a href="endpoints.html">Endpoints</a>
+        <a href="authentication.html">Authentication</a>
+        <a href="errors.html">Errors</a> <a href="security.html">Security</a>
+        <a href="rate_limiting.html">Rate Limiting</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="contribute.html">Contribute</a>
+        <a href="credits.html">Credits</a> <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms_of_service.html">Terms of Service</a>
+        <a href="privacy_policy.html">Privacy Policy</a>
+        <a href="license.html">License</a>
+      </div>
+    </header>
+    <nav>
+      <div class="search-container">
+        <input type="text" placeholder="Search.." />
+        <button><i class="fa fa-search"></i>Search</button>
+      </div>
+    </nav>
+    <main class="container">
+      <h2>Welcome to Quiz Solver AI API Documentation</h2>
+      <p>
+        This is the documentation for the Quiz Solver AI API. Here you can find
+        information about how to use the API, its endpoints, authentication
+        methods, error handling, security measures, and more.
+      </p>
+      <p>
+        Click on the links below to navigate to different sections of the
+        documentation.
+      </p>
+      <button class="button">API Overview</button>
+      <button class="button">Getting Started</button>
+      <button class="button">Usage</button>
+      <button class="button">Installation</button>
+      <div>
+        <h3>API Overview</h3>
+        <p>
+          The Quiz Solver AI API is a RESTful web service that allows users to
+          solve quiz questions using artificial intelligence. The API provides
+          endpoints for submitting quiz questions, retrieving answers, and
+          managing user accounts.
+        </p>
+        <p>
+          The API is designed to be simple and easy to use, with clear and
+          concise documentation to help developers integrate it into their
+          applications.
+        </p>
+        <p>
+          For more information on the API endpoints and their usage, refer to
+          the <a href="endpoints.html">Endpoints</a> section.
+        </p>
+      </div>
+
+      <div>
+        <h3>Getting Started</h3>
+        <p>
+          To get started with the Quiz Solver AI API, you don't need to install
+          anything. You can start using the API by making HTTP requests to the
+          endpoints listed in the documentation.
+        </p>
+        <p>
+          You don't need to create an account to use the API, but some endpoints
+          require authentication. You can find more information about
+          authentication in the
+          <a href="authentication.html">Authentication</a> section.
+        </p>
+        <p>
+          Before using the API, make sure to review the terms of service and
+          privacy policy in the respective sections.
+        </p>
+      </div>
+
+      <div>
+        <h3>Usage</h3>
+        <p>
+          The Quiz Solver AI API can be used to solve quiz questions
+          programmatically. You can submit a question to the API, and it will
+          return the correct answer based on its AI models.
+        </p>
+        <p>
+          To use the API, send a POST request to the
+          <code>/question</code> endpoint with the question in the request body.
+          The API will return the correct answer.
+        </p>
+        <p>
+          For code examples and usage instructions, refer to the
+          <a href="usage.html">Usage</a> section.
+        </p>
+      </div>
+
+      <div>
+        <h3>Installation</h3>
+        <p>
+          The Quiz Solver AI API does not require any installation or setup. You
+          can access the API directly over the internet using HTTP requests.
+        </p>
+        <p>
+          To start using the API, simply make HTTP requests to the appropriate
+          endpoints. You can find a list of endpoints and their descriptions in
+          the <a href="endpoints.html">Endpoints</a> section.
+        </p>
+        <p>
+          For integration guides and code examples, refer to the
+          <a href="installation.html">Installation</a> section.
+        </p>
+      </div>
+    </main>
+    <footer><p>&copy; 2024 Quiz Solver AI. All rights reserved.</p></footer>
+    <script>
+      var menu = document.querySelector("header .menu");
+      function showMenu() {
+        if (menu.style.display != "none") {
+          menu.style.display = "none";
+        } else {
+          menu.style.display = "block";
+        }
+      }
+      menu.style.display = "none";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+# write gitignore file's code here
+
+node_modules
+.env
+.env.local
